@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,13 +10,15 @@
 
   <ItemGroup>
     <Compile Include="Editors\Buttons.fs" />
+    <Compile Include="Editors\CheckboxComponent.fs" />
     <Compile Include="Editors/Chips.fs" />
+    <Compile Include="Navigations\SideBar.fs" />
+    <Compile Include="Dropdowns\ComboBoxComponent.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fable.Core" Version="2.0.3" />
-    <PackageReference Include="Fable.Import.Browser" Version="1.3.0" />
-    <PackageReference Include="Fable.React" Version="4.1.3" />
+    <PackageReference Include="Fable.Core" Version="3.0.0" />
+    <PackageReference Include="Fable.React" Version="5.2.3" />
   </ItemGroup>
 
   <ItemGroup>

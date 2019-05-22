@@ -9,7 +9,19 @@ module Utils =
 
   module Packages =
     let [<Literal>] Buttons = "@syncfusion/ej2-react-buttons"
+    let [<Literal>] Navigations = "@syncfusion/ej2-react-navigations"
+    let [<Literal>] Dropdowns = "@syncfusion/ej2-react-dropdowns"
 
+
+type [<StringEnum(CaseRules.None)>]FloatLabelType =
+  | Never
+  | Always
+  | Auto
+
+type [<StringEnum(CaseRules.None)>]SortOrder =
+  | None
+  | Ascending
+  | Descending
 
 type [<StringEnum>] Classes =
   | [<CompiledName("e-primary")>] Primary
@@ -22,4 +34,14 @@ type [<StringEnum>] Classes =
   | [<CompiledName("e-icon")>] Icon
 
 
+type ChangeEventArgs =
+  abstract value: string with get
+type Event = interface end
+type PopupEventArgs = 
+  abstract cancel: bool with get
+
+
 type 'a EmitType = 'a -> unit
+type ChangeEvent = ChangeEventArgs EmitType
+type Event' = Event EmitType
+type PopupEvent = PopupEventArgs EmitType

@@ -1,4 +1,4 @@
-﻿module EJ2.React.Buttons
+﻿module EJ2.React.CheckBox
 
 
 open System
@@ -10,21 +10,22 @@ open Fable.React.Props
 
 
 [<RequireQualifiedAccess>]
-module Button =
-  type [<StringEnum(CaseRules.None)>] IconPosition =
-    | Left
-    | Right
+module CheckBox =
+  type [<StringEnum(CaseRules.None)>] LabelPosition = Before | After
   type Props =
-    | Created of Event'
-    | Content of string
+    | Checked of bool
     | CssClass of string
     | Disabled of bool
     | EnablePersistence of bool
     | EnableRtl of bool
-    | IconCss of string
-    | IconPosition of IconPosition
-    | IsPrimary of bool
-    | IsToggle of bool
+    | Indeterminate of bool
+    | Label of string
+    | LabelPosition of LabelPosition
+    | Locale of string
+    | Name of string
+    | Value of string
+    | Change of ChangeEvent
+    | Created of Event'
     | Props of IHTMLProp list
     interface IHTMLProp
     
@@ -35,4 +36,4 @@ module Button =
                                | x -> (x :> IHTMLProp) :: s) []
       |> kvl
 
-let buttonComponent props children = ofImport "ButtonComponent" Packages.Buttons (Button.p props) children
+let buttonComponent props children = ofImport "CheckBoxComponent" Packages.Buttons (CheckBox.p props) children

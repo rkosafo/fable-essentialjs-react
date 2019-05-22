@@ -5,8 +5,8 @@ open System
 open Fable.Core
 open EJ2.React
 open Utils
-open Fable.Helpers.React
-open Fable.Helpers.React.Props
+open Fable.React
+open Fable.React.Props
 
 
 type ClickEventArgs =
