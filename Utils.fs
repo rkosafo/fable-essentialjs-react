@@ -11,6 +11,7 @@ module Utils =
     let [<Literal>] Buttons = "@syncfusion/ej2-react-buttons"
     let [<Literal>] Navigations = "@syncfusion/ej2-react-navigations"
     let [<Literal>] Dropdowns = "@syncfusion/ej2-react-dropdowns"
+    let [<Literal>] Schedule = "@syncfusion/ej2-react-schedule"
 
 
 type [<StringEnum(CaseRules.None)>]FloatLabelType =

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Schedule.fs" />
     <Compile Include="Editors\Buttons.fs" />
     <Compile Include="Editors\CheckboxComponent.fs" />
     <Compile Include="Editors/Chips.fs" />
@@ -23,6 +24,10 @@
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="4.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Layouts\" />
   </ItemGroup>
 
 </Project>
